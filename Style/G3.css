@@ -25,7 +25,7 @@
 .dark-2{
     font-size: 1.1rem;
     color: #424242;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .dark-3{
@@ -89,6 +89,7 @@
 
 .banner-img{
     width: 100%;
+    height: auto;
 }
 
 /* teams section */
@@ -109,6 +110,7 @@
     margin-right: 65px;
 }
 .team-contant-title{
+    margin-top: 0px;
     margin-bottom: 15px;
     padding-right: 100px;
 }
@@ -125,6 +127,49 @@
     color: #FF900E;
 }
 
+/* Features you will love & enjoy  */
+
+/* //some-fact */
+.some-fact-description{
+    max-width: 540px;
+}
+.some-fact-title{
+    margin-bottom: 24px;
+}
+
+.fact-container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    max-width: 1330px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+
+.fact{
+    border: 2px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.fact-value{
+    font-size: 2.8rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.fact-name{
+    font-size: 1.1rem;
+    margin-top: 5px;
+
+}
+
 
 
 
@@ -134,28 +179,45 @@
     .navbar{
         flex-direction: column;
     }
+
     .teams{
-        background-image: url("../images/bg-img.png"); opacity: 0.92;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        flex-direction: column-reverse;
+    }
+    
+    .team-img{
+        margin-left: 5px;
     }
     .team-contant-title{
-        color: #424242;
-        padding: 0px 0px;
+        padding-right: 0px;
     }
-    .team-contant-description{
-        color: #424242;
+    .team-contant {
+    margin-right: 0%;
     }
-    .team-contant{
-        padding-left: 20px;
-        
+
+    /* some-fact */
+
+    .fact-container{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        justify-items: center;
     }
-    .team-img{
-        display: none;
+}
+
+@media screen and (min-width:576px) and (max-width:992px){
+    .teams{
+        flex-direction: column-reverse;
     }
-    .btn-primary{
-        margin-bottom: 37px;
+
+    .fact-container{
+        grid-template-columns: repeat(3 , 1fr);
+        row-gap: 30px;
+        justify-items: center;
+    }
+    .fact{
+        width: 180px;
+        height: 180px;
+    }
+    .team-img {
+        margin-left: 0px;
     }
 }
